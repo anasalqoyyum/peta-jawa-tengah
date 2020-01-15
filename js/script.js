@@ -2,8 +2,8 @@ var width = 1920,
   height = 1080,
   populationDomain;
 
-var colorRange = ["#1a9850", "#66bd63", "#a6d96a", "#d9ef8b", "#ffffbf", "#fee08b", "#fdae61", "#f46d43", "#d73027"];
-var populationDomain = [0, 100000, 200000, 300000, 500000, 750000, 1000000, 1500000, 2500000, 5000000];
+var colorRange = ["#532E26", "#9E4825", "#E07A26", "#F2B526", "#EDE626", "#E4FD7E", "#9CDA9B", "#55A252", "#26622F"];
+var populationDomain = [0, 21, 51, 101, 151, 201, 301, 401, 501];
 
 // Create SVG element
 var svg = d3.select("body").insert("svg", "p")
@@ -61,7 +61,7 @@ function ready(error, data, population) {
   g.selectAll("path")
     .append("title")
     .text(function (d) {
-      return d.properties.kabkot + " : " + populationData[d.properties.kabkot];
+      return d.properties.kabkot + " : " + populationData[d.properties.kabkot] ;
     });
 }
 
