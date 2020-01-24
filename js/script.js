@@ -21,7 +21,7 @@ var path = d3.geoPath().projection(projection);
 
 // Asynchronous tasks, load topojson map and data
 d3.queue()
-  .defer(d3.json, "https://gist.githubusercontent.com/darknowns/e27e95a289af09d95419bd17bdb01d1d/raw/e63ee9f7fc4d9eff43c63b8038f80dea9cbb0e30/jateng.geojson")
+  .defer(d3.json, "data/jawa-tengah.json")
   .defer(d3.csv, "data/data.csv")
   .await(ready);
 
@@ -71,7 +71,7 @@ function resize() {
   width = window.innerWidth;
   height = window.innerHeight;
 
-  projection.scale(width * 1.2)
+  projection.scale(width * 12)
     .translate([width / 2, height / 2]);
 
   d3.select("svg")
